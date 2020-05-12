@@ -1,19 +1,18 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Text, View } from 'react-native';
+import { Image } from 'react-native';
+import AppButton from './application/components/AppButton';
+import PreLoader from './application/components/PreLoader';
+import BackgroundImage from './application/components/BackgroundImage';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Mi Ap XD</Text>
-    </View>
+        
+    <BackgroundImage
+        source={require('./assets/images/wall.png')}
+    >
+
+    </BackgroundImage>
+    
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
