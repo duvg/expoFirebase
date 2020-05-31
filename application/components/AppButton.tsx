@@ -12,28 +12,34 @@ interface IAppButtonProps {
 }
 const AppButton = (props: IAppButtonProps) => {
     const { action, iconName, iconColor, title, bgColor } = props;
-    const { width } = Dimensions.get('window');
     return(
         <Button
             onPress={action}
             buttonStyle={{
                 backgroundColor: bgColor,
-                height: 45,
+                height: 40,
                 borderColor: "transparent",
                 borderWidth: 0,
                 borderRadius: 5,
-                marginBottom: 5,
-                width: width
+                marginTop: 5,
+                width: '100%',
+                padding: 0,
+                alignSelf: 'stretch'
+                
+            }}
+            titleStyle={{
+                fontSize: 14,
+                marginLeft: 10
             }}
             title={title}
             icon={
                 <Icon
                     name={iconName}
-                    size={15}
+                    size={25}
                     color={iconColor}
                 />
             }
-            iconRight={true}
+            iconRight={false}
         >
 
         </Button>
