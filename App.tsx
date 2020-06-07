@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Text } from 'react-native-elements';
 import GuestNavigation from './application/navigations/Guest';
+import LogguedNavigation from './application/navigations/Logged';
 import firebaseConfig from './application/utils/firebase';
 import PreLoader from './application/components/PreLoader';
 import * as firebase from 'firebase';
 import * as Facebook from 'expo-facebook';
 import facebookConfig from './application/utils/facebook';
-
+import RestaurantEmpty from './application/components/Restaurant/RestaurantEmpty';
 
 
 firebase.initializeApp(firebaseConfig);
@@ -50,7 +51,7 @@ export default function App() {
   
   if(statusUser.isLoggued)
   { 
-    return(<Text>Logueado</Text>)
+    return(<LogguedNavigation />)
   } 
   else
   {

@@ -9,6 +9,7 @@ import { Text, View, Button } from 'react-native';
 import StartScreen from '../screens/Start';
 import LoginScreen from '../screens/Login';
 import RegisterScreen from '../screens/Register';
+import Restaurants from '../screens/Restaurants/Restaurants';
 
 
 const Stack = createStackNavigator();
@@ -19,6 +20,7 @@ const GuestNavigation = () => {
             initialRouteName="Login"
               headerMode="none"
             >   
+                <Stack.Screen name="Restaurant" component={Restaurants} options={{ title: 'Restaurants'}} />
                 <Stack.Screen name="Login" component={LoginScreen} options={{ title: 'Login'}} />
                 <Stack.Screen name="Register" component={RegisterScreen} />
                

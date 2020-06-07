@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import { View, Text, TextInput, StyleSheet, Image } from 'react-native';
 import AppButton from '../components/AppButton';
-import { Card, Button } from 'react-native-elements';
+import { Button } from 'react-native-elements';
 import { useForm } from 'react-hook-form';
-import { StackScreenProps, StackNavigationProp } from '@react-navigation/stack';
+import { StackNavigationProp } from '@react-navigation/stack';
 import Toast from 'react-native-simple-toast';
 import * as firebase from 'firebase';
 import commonStyles from '../../assets/styles/common';
