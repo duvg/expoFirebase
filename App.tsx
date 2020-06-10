@@ -7,9 +7,11 @@ import PreLoader from './application/components/PreLoader';
 import * as firebase from 'firebase';
 import * as Facebook from 'expo-facebook';
 import facebookConfig from './application/utils/facebook';
-import RestaurantEmpty from './application/components/Restaurant/RestaurantEmpty';
+import { createDrawerNavigator } from '@react-navigation/drawer';
 
 
+
+const Drawer = createDrawerNavigator();
 firebase.initializeApp(firebaseConfig);
 export default function App() {
 
@@ -42,6 +44,7 @@ export default function App() {
     
   }, []);
 
+  
   if( ! statusUser.loaded)
   {
     return(
@@ -51,7 +54,9 @@ export default function App() {
   
   if(statusUser.isLoggued)
   { 
-    return(<LogguedNavigation />)
+    return(
+      
+      <LogguedNavigation />)
   } 
   else
   {
